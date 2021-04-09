@@ -1,0 +1,8 @@
+{
+  "name": "kimura/interview",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  }
+}
