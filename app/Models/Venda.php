@@ -17,6 +17,12 @@ class Venda {
     public $seller_id;
     
     /**
+     * valor da venda
+     * @var float $value
+     */
+    public $value;
+    
+    /**
      * Data da venda
      * @var datetime $sale_date
      */
