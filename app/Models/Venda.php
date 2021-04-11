@@ -2,7 +2,8 @@
 
 namespace App\Models;
 
-class Venda {
+class Venda 
+{
 
     /**
      * Id da venda

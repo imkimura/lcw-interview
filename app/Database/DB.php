@@ -7,7 +7,8 @@ use \PDO;
 require_once __DIR__.'\..\..\config\database.php';
 
 
-class DB {
+class DB 
+{
    
     /**
     * Nome da tabela

@@ -2,8 +2,13 @@
     
     $resultados = '';
     
-    foreach($vendedores as $vendedor)
-      $resultados .= '<option value='.$vendedor->id.'>'. $vendedor->name.'</option>';
+    foreach($vendedores as $vendedor) {
+        if($vendedor->id == $venda->seller_id) {
+            $resultados .= '<option selected value='.$vendedor->id.'>'. $vendedor->name.'</option>';
+        } else {
+            $resultados .= '<option value='.$vendedor->id.'>'. $vendedor->name.'</option>';
+        }
+    }
 
     $resultados = strlen($resultados) ? $resultados : '<option selected>Cadastre um vendedor primeiro</option>';
 ?>
@@ -19,7 +24,7 @@
 
     <div class="form-group">
       <label>Valor da Compra</label>
-      <input class="form-control" name="value" >
+      <input class="form-control" name="value" value="<?=$venda->value?>">
     </div>
 
     <div class="form-group">

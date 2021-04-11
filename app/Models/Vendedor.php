@@ -2,7 +2,8 @@
 
 namespace App\Models;
 
-class Vendedor {
+class Vendedor 
+{
 
     /**
      * Id do vendedor
