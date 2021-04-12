@@ -5,11 +5,11 @@
   <form method="post">
 
     <div class="form-group">
-      <p>Você deseja realmente excluir a venda <strong><?=$venda->id?></strong>?</p>
+      <p>Você deseja realmente excluir a venda <strong><?=$vendedor->id?></strong>?</p>
     </div>
 
     <div class="form-group">
-      <a href="vendas.php">
+      <a href="vendedores.php">
         <button type="button" class="btn btn-success">Cancelar</button>
       </a>
 

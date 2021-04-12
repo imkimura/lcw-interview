@@ -14,19 +14,19 @@
   }
 
   $resultados = '';
-  foreach($vendas as $venda){
-    $venda = (object) $venda;
+  foreach($vendedores as $vendedor){
     $resultados .= '<tr>
-                      <td>'.$venda->id.'</td>
-                      <td>'.$venda->name.'</td>
-                      <td>'.$venda->email.'</td>
-                      <td> R$ '.$venda->value.'</td>
-                      <td>'.date('d/m/Y',strtotime($venda->sale_date)).'</td>
+                      <td>'.$vendedor->id.'</td>
+                      <td>'.$vendedor->name.'</td>
+                      <td>'.$vendedor->email.'</td>
                       <td>
-                        <a href="editar-venda.php?id='.$venda->id.'">
+                        <a href="editar-vendedor.php?id='.$vendedor->id.'">
                           <button type="button" class="btn btn-primary">Editar</button>
                         </a>
-                        <a href="excluir-venda.php?id='.$venda->id.'">
+                        <a href="listar-vendas.php?id='.$vendedor->id.'">
+                          <button type="button" class="btn btn-warning">Listar Vendas</button>
+                        </a>
+                        <a href="excluir-vendedor.php?id='.$vendedor->id.'">
                           <button type="button" class="btn btn-danger">Excluir</button>
                         </a>
                       </td>
@@ -45,11 +45,9 @@
       <table id="dataTable" class="table table-striped table-bordered" style="width: 100%;">
           <thead>
             <tr>
-              <th>id</th>
-              <th>Vendedor</th>
+              <th>ID</th>
+              <th>Nome</th>
               <th>Email</th>
-              <th>Valor</th>
-              <th>Data</th>
               <th></th>
             </tr>
           </thead>
@@ -61,8 +59,8 @@
   </section>
 
   <section>
-    <a href="cadastrar-venda.php">
-      <button class="btn btn-success">Nova Venda</button>
+    <a href="cadastrar-vendedor.php">
+      <button class="btn btn-success">Novo vendedor</button>
     </a>
   </section>
 

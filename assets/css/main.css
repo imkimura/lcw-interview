@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+}
+
+body {
+  background: #253646 !important;
+}
+
+.title-navbar {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #360e4c !important;
+}
+
+@media (min-width: 992px) {
+  
+}
+
+.navbar-expand-lg {
+  justify-content: space-between;
+  padding: 10px 40px;
+  background-color: #253646 !important;
+}
+
+#navbarNav {
+  justify-content: flex-start;
+}
+
+.navbar-brand.title-navbar img {
+  width: 138px;
+  margin-top: -6px;
+  margin-right: 20px;
+}
+
+.navbar-expand-lg a,
+.navbar-expand-lg p {
+  margin: 0;
+  color: #fffefb !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav-item .nav-link {
+  color: #fffefb6b !important;
+}
+
+.nav-item.active .nav-link {
+  color: #fffefb !important;
+}

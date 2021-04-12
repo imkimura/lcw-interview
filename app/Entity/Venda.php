@@ -37,9 +37,12 @@ class Venda
      * @return Array(Venda)
     */
     public function index() {   
-        return (new DB('sale'))
-            ->read()
-            ->fetchAll(PDO::FETCH_CLASS, self::class);
+        $query = "SELECT sa.id, se.name, se.email, sa.value, sa.sale_date 
+                  FROM sale sa 
+                  INNER JOIN seller se 
+                  ON se.id = sa.seller_id";
+                
+        return (new DB)->execute($query)->fetchAll();    
     }
 
     /**
