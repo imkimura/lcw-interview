@@ -18,6 +18,18 @@
 ?>
 <main>
 
+<section id="title-section">
+    <div class="container mt-4">
+      <div style="display:flex;justify-content:space-between; align-items:center;">
+        <h1>Lista de Vendas <?php echo $vendas[0]['name'] ?></h1>
+
+        <a href="vendedores.php">
+          <button class="btn btn-success">Voltar</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="table-responsive col-sm-12 mt-4">
       <table id="dataTable" class="table table-striped table-bordered" style="width: 100%;">
@@ -37,11 +49,4 @@
       </table>
     </div>
   </section>
-
-  <section>
-    <a href="cadastrar-venda.php">
-      <button class="btn btn-success">Nova Venda</button>
-    </a>
-  </section>
-
 </main>

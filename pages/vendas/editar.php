@@ -14,17 +14,28 @@
 ?>
 <main>
 
-  <section>
-    <a href="vendas.php">
-      <button class="btn btn-success">Voltar</button>
-    </a>
+
+  <section id="title-section">
+    <div class="container mt-4">
+      <div style="display:flex;justify-content:space-between; align-items:center;">
+        <h1>Editar uma Venda</h1>
+        <a href="vendas.php">
+          <button class="btn btn-success">Voltar</button>
+        </a>
+      </div>      
+    </div>
   </section>
 
   <form method="post">
 
     <div class="form-group">
       <label>Valor da Compra</label>
-      <input class="form-control" name="value" value="<?=$venda->value?>">
+      <input class="form-control" name="value" value="<?=$venda->value?>" required>
+    </div>
+
+    <div class="form-group">
+      <label>Data da Compra</label>
+      <input class="form-control" name="sale_date" type="date" value="<?=date('Y-m-d',strtotime($venda->sale_date))?>" required>
     </div>
 
     <div class="form-group">

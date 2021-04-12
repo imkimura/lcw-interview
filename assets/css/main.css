@@ -11,7 +11,7 @@ body,
 }
 
 body {
-  background: #253646 !important;
+  /* background: #253646 !important; */
 }
 
 .title-navbar {
@@ -56,4 +56,96 @@ body {
 
 .nav-item.active .nav-link {
   color: #fffefb !important;
+}
+
+#title-section {
+  margin: 50px 0;
+}
+
+#title-section h1 {
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+form {
+  width: 100%;  
+  font-family: Montserrat;
+}
+
+form label {
+  font-weight: 500;
+}
+
+form input {
+  background: #f3f3f3 !important;
+  border: none !important;
+}
+
+form button {
+  font-size: 1.2rem !important;
+}
+
+
+/* Buttons */
+button {
+  font-weight: bold !important;
+  text-transform: uppercase;
+  font-family: 'Fjalla One', sans-serif;
+  color: #1f2c38 !important;
+  border-radius: 100px !important;
+  padding: 5px 15px !important;
+  margin: 2px 0;
+  border: none !important;
+}
+
+button.btn-primary {
+  background-color: #20354aba !important;
+  color: white !important;
+  text-align: center;
+  /* padding: 5px 11px 5px 14px !important; */
+}
+
+button.btn-success {
+  background-color: #a6b2bd !important;
+}
+
+button.btn-danger {
+  background-color: #ff5a6a !important;
+}
+
+/* Tabela */
+.table thead th {
+  border-bottom: 1px solid #3e7ab561;
+}
+
+table.table-bordered.dataTable {
+  width: 100%;
+  font-family: Montserrat, sans-serif;
+  font-size: 15.2px;
+  /* background: #1f2c38 !important; */
+  background: #f3f3f3 !important;
+  border-radius: 9px;
+}
+
+.table-bordered td, .table-bordered th {
+  border: none;
+  /* border-top: 1px solid #253646; */
+}
+
+.table-bordered {
+  border: none !important;
+}
+
+div.dataTables_wrapper div.dataTables_length label,
+div.dataTables_wrapper div.dataTables_filter label,
+div.dataTables_wrapper div.dataTables_info {
+  color: #5a5a5a;
+  font-family: Montserrat;
+  font-size: 14.5px;
+}
+
+.page-item.active .page-link {
+  background-color: #253646;
+    border-color: #253646;
 }

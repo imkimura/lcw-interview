@@ -52,7 +52,7 @@ class DB
     * @return PDOStatement
     */ 
     public function execute($query, $params = []){
-        try{
+        try {
             
             $statement = $this->connection->prepare($query);
             $statement->execute($params);

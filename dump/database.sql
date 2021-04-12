@@ -23,4 +23,5 @@ create table sale (
     CONSTRAINT fk_sale_seller_id
     FOREIGN KEY (seller_id)
     REFERENCES seller(id)
+    ON DELETE CASCADE
 );

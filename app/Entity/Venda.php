@@ -61,7 +61,7 @@ class Venda
     */
     public function create() {
 
-        $this->sale_date = date('Y-m-d H:i:s');
+        $this->sale_date =  date("Y-m-d", strtotime($this->sale_date));
 
         $db = new DB('sale');
 
@@ -82,7 +82,7 @@ class Venda
                 ->update('id = '. $this->id, [
                     'seller_id' => $this->seller_id,
                     'value' => $this->value,
-                    'sale_date' => $this->sale_date,
+                    'sale_date' => date("Y-m-d", strtotime($this->sale_date)),
                 ]);
     }
 

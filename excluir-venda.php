@@ -2,18 +2,17 @@
 
 include __DIR__.'/vendor/autoload.php';
 
-
 use \App\Entity\Venda;
 
 if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
-    header('location: index.php?status=error');
+    header('location: vendas.php?status=error');
     exit;
 }
 
 $venda = Venda::show($_GET['id']);
 
 if(!$venda instanceof Venda){
-    header('location: index.php?status=error');
+    header('location: vendas.php?status=error');
     exit;
 }
 
@@ -21,7 +20,7 @@ if (isset($_POST['delete'])) {
       
     $venda->delete();
   
-    header('location: index.php?status=success');
+    header('location: vendas.php?status=success');
     exit;
 }
 

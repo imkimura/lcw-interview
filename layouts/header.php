@@ -25,7 +25,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark text-light" style="z-index: 1;">      
       <div class="collapse navbar-collapse" id="navbarNav">
-        <a class="navbar-brand title-navbar" href="/"><img src="./assets/img/locaweb.png" alt="LOCAWEB"></a>
+        <a class="navbar-brand title-navbar" href="index.php"><img src="./assets/img/locaweb.png" alt="LOCAWEB"></a>
         <ul class="navbar-nav">
           <li class="nav-item<?php if (preg_match("/\bindex.php\b/", $_SERVER['SCRIPT_NAME'])): ?> active<?php endif; ?>">
             <a class="nav-link" href="index.php">Home <span class="sr-only"></span></a>
@@ -39,14 +39,12 @@
         </ul>
       </div>
       <div>
-        <p>Ola, Caro Analisador</p>
+        <p> <i class="fas fa-user-shield" style="color: #f00843;font-size: 21px;margin-right: 7px;"></i> Ola, Caro Analisador!</p>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      
-      
     </nav>
     <div class="container">
 
