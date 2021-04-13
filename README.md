@@ -1,7 +1,8 @@
 # lcw-interview
 
 <p>Cron</p>
-```cmd
+
+```
   59 23 * * * php -f cron.php
 ```
 
