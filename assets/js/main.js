@@ -150,8 +150,15 @@ var chartLines = (days) => {
                 data: lbQtd,
                 fill: false,
                 borderColor: '#f00843',
-                tension: 0.2
+                tension: 0.2,
+                backgroundColor: '#f008435c',
+                fill: true
             }]
+        },
+        options: {
+            scales: {
+                y: { min: 0 }
+            }
         }
     });
 };
