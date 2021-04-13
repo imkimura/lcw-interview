@@ -86,5 +86,84 @@ $(document).ready(() => {
             }
         });
         e.preventDefault();
-    })
+    });
+
 });
+
+var getDataHome = () => {
+    $.ajax({            
+        type: "POST",
+        url: 'home.php',
+        success: function(data) {
+            data = JSON.parse(data)
+            console.log(data.success);
+            console.log(data.sellers);
+
+            chartBars(data.sellers);
+            chartLines(data.week);
+        }
+    });
+}
+
+var chartBars = (sellers) => {
+    
+    let lbSellers = [];
+    let lbQtd = [];
+
+    sellers.forEach((seller) => {
+        lbSellers.push(seller.name);
+        lbQtd.push(seller.qtd);
+    });
+
+    var ctx = document.getElementById('myChart');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: lbSellers,
+            datasets: [{
+                label: 'Quantidade de Vendas por Vendedor',
+                data: lbQtd,
+                backgroundColor: [
+                    '#213F70',
+                    '#2789e6',
+                    '#4687F0',
+                    '#113570',
+                    '#376ABD',
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+};
+
+var chartLines = (days) => {
+    
+    let lbDays = [];
+    let lbQtd = [];
+
+    days.forEach((day) => {
+        lbDays.push(day.sale_date);
+        lbQtd.push(day.qtd);
+        console.log(day);
+    });
+
+    new Chart(document.getElementById("chart-week"), {
+        type: 'line',        
+        data: {
+            labels: lbDays,
+            datasets: [{
+                label: 'Quantidade de Vendas por Dia na Semana',
+                data: lbQtd,
+                fill: false,
+                borderColor: '#f00843',
+                tension: 0.2
+            }]
+        }
+    });
+};

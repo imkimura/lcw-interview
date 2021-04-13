@@ -26,7 +26,7 @@
     </div>
 
     <div class="form-group">
-      <button type="submit" class="btn btn-success">Enviar</button>
+      <button type="submit" class="btn btn-success">Cadastrar</button>
     </div>
   </form>
 </main>

@@ -40,7 +40,7 @@
     </div>
 
     <div class="form-group mt-4">
-      <button type="submit" class="btn btn-success">Enviar</button>
+      <button type="submit" class="btn btn-success">Cadastrar</button>
     </div>
   </form>
 </main>

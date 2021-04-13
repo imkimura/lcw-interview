@@ -46,6 +46,6 @@
       </button>
 
     </nav>
-    <div class="container">
+    <div class="container" style="height: auto;padding: 30px 15px 80px;">
 
     
