@@ -123,7 +123,8 @@ var chartBars = (sellers) => {
         options: {
             scales: {
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    ticks: { stepSize: 1 } 
                 }
             }
         }
@@ -157,7 +158,11 @@ var chartLines = (days) => {
         },
         options: {
             scales: {
-                y: { min: 0 }
+                y: { 
+                    min: 0,
+                    ticks: { stepSize: 1 } 
+                },
+                
             }
         }
     });
