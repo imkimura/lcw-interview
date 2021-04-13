@@ -19,11 +19,11 @@ if(!$venda instanceof Venda){
 if (isset($_POST['delete'])) {
       
     $venda->delete();
-  
+    
+    echo json_encode(array('success' => true));
     header('location: vendas.php?status=success');
     exit;
 }
-
-include __DIR__.'/layouts/header.php';
-include __DIR__.'/pages/vendas/excluir.php';
-include __DIR__.'/layouts/footer.php';
+// include __DIR__.'/layouts/header.php';
+// include __DIR__.'/pages/vendas/excluir.php';
+// include __DIR__.'/layouts/footer.php';
