@@ -16,11 +16,18 @@ if (isset($_POST['value'], $_POST['seller_id'])) {
     $venda->seller_id = $_POST['seller_id'];
     $venda->sale_date = $_POST['sale_date'];
     
-    $venda->create();
-  
-    header('location: vendas.php?status=success');
-    
-    exit;
+    try 
+    {
+        $venda->create();      
+        header('location: vendas.php?status=success');
+        
+        exit;
+
+    } finally {
+        header('location: vendas.php?status=error');
+        
+        exit;
+    }
 }
 
 include __DIR__.'/layouts/header.php';

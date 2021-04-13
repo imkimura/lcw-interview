@@ -12,11 +12,19 @@ if (isset($_POST['name'], $_POST['email'])) {
     $vendedor->name = $_POST['name'];
     $vendedor->email = $_POST['email'];
     
-    $vendedor->create();
-  
-    header('location: vendedores.php?status=success');
+    try 
+    {
+        $vendedor->create();
     
-    exit;
+        header('location: vendedores.php?status=success');
+        
+        exit;
+        
+    } finally {
+        header('location: vendedores.php?status=error');
+        
+        exit;
+    }
 }
 
 include __DIR__.'/layouts/header.php';

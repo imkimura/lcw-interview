@@ -17,12 +17,19 @@ if(!$vendedor instanceof Vendedor){
     exit;
 }
 
-if (isset($_POST['delete'])) {
-      
-    $vendedor->delete();
-  
-    header('location: vendedores.php?status=success');
-    exit;
+if (isset($_POST['delete'])) {    
+    try
+    {
+        $vendedor->delete();
+    
+        header('location: vendedores.php?status=success');
+        exit;
+
+    } finally {
+        header('location: vendedores.php?status=error');
+        
+        exit;
+    }
 }
 
 include __DIR__.'/layouts/header.php';
