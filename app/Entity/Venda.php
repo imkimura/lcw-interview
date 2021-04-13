@@ -46,6 +46,19 @@ class Venda
     }
 
     /**
+     *  Lista todas as Vendas
+     * @return sum Venda
+    */
+    public function totalSalesOfSeller($seller_id) {   
+        $query = "SELECT count(*) quantidade, sum(value) total 
+                  FROM sale 
+                  WHERE sale_date = curdate()
+                  AND seller_id = ". $seller_id;
+                
+        return (new DB)->execute($query)->fetchObject();    
+    }
+
+    /**
      * Retorna venda
      * @param id
      * @return Venda

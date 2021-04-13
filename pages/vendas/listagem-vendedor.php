@@ -21,7 +21,7 @@
 <section id="title-section">
     <div class="container mt-4">
       <div style="display:flex;justify-content:space-between; align-items:center;">
-        <h1>Lista de Vendas <?php echo $vendas[0]['name'] ?></h1>
+        <h1>Lista de Vendas: <?php echo $vendedor->name ?></h1>
 
         <a href="vendedores.php">
           <button class="btn btn-success">Voltar</button>
