@@ -80,7 +80,7 @@ class Venda
 
         $this->id = $db->create([
             'seller_id' => $this->seller_id,
-            'value' => $this->value,
+            'value' => str_replace(',', '.', $this->value),
             'sale_date' => $this->sale_date,
         ]);
 
@@ -94,7 +94,7 @@ class Venda
         return (new DB('sale'))
                 ->update('id = '. $this->id, [
                     'seller_id' => $this->seller_id,
-                    'value' => $this->value,
+                    'value' => str_replace(',', '.', $this->value),
                     'sale_date' => date("Y-m-d", strtotime($this->sale_date)),
                 ]);
     }
