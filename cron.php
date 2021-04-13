@@ -14,12 +14,13 @@ ini_set('display_errors', 0);
 
 $vendedores = Vendedor::index();
 
-$mail = new PHPMailer;
-Log::info('Cheguei ate aqui');
-
-$mail = new Mail($mail);
 
 foreach ($vendedores as $vendedor) {
+        
+    $mail = new PHPMailer;
+
+    $mail = new Mail($mail);
+
     $total = Venda::totalSalesOfSeller($vendedor->id);
 
     Log::info('Começando enviar email para -> ' .$vendedor->name. ' | '. $vendedor->email);
@@ -56,8 +57,7 @@ foreach ($vendedores as $vendedor) {
     ];
 
     $mail->send($data);
-    
-    Log::info('Enviou email para -> ' . $vendedor->name . ' | '. $vendedor->email);
+        
 }
 
 ?>
